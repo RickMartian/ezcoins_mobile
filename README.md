@@ -1,1 +1,1 @@
-# ez-coins-mobile
+# ezcoins_mobile
