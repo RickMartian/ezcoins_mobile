@@ -1,0 +1,81 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run -d SM
+
+## exception
+
+ProcessException: ProcessException: Permission denied
+  Command: /Users/henriquemarciano/Development/flutter/.pub-cache/hosted/pub.dartlang.org/fluttie-0.5.0/android/gradlew -I=/Users/henriquemarciano/Development/flutter/packages/flutter_tools/gradle/aar_init_script.gradle -Pflutter-root=/Users/henriquemarciano/Development/flutter -Poutput-dir=/Volumes/MacOS Applications/Projects/ezcoins_mobile/build/app -Pis-plugin=true -Ptarget-platform=android-arm,android-arm64,android-x64 assembleAarRelease
+
+```
+#0      _DefaultProcessUtils.run (package:flutter_tools/src/base/process.dart:266:37)
+<asynchronous suspension>
+#1      buildGradleAar (package:flutter_tools/src/android/gradle.dart:548:33)
+#2      buildPluginsAsAar (package:flutter_tools/src/android/gradle.dart:711:13)
+#3      buildGradleApp (package:flutter_tools/src/android/gradle.dart:257:11)
+#4      _AsyncAwaitCompleter.start (dart:async-patch/async_patch.dart:45:6)
+#5      buildGradleApp (package:flutter_tools/src/android/gradle.dart:218:28)
+#6      buildGradleApp (package:flutter_tools/src/android/gradle.dart:415:19)
+#7      _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:73:64)
+#8      _rootRunUnary (dart:async/zone.dart:1134:38)
+#9      _CustomZone.runUnary (dart:async/zone.dart:1031:19)
+#10     _FutureListener.handleValue (dart:async/future_impl.dart:139:18)
+#11     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:680:45)
+#12     Future._propagateToListeners (dart:async/future_impl.dart:709:32)
+#13     Future._completeWithValue (dart:async/future_impl.dart:524:5)
+#14     Future._asyncComplete.<anonymous closure> (dart:async/future_impl.dart:554:7)
+#15     _rootRun (dart:async/zone.dart:1126:13)
+#16     _CustomZone.run (dart:async/zone.dart:1023:19)
+#17     _CustomZone.runGuarded (dart:async/zone.dart:925:7)
+#18     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:965:23)
+#19     _microtaskLoop (dart:async/schedule_microtask.dart:43:21)
+#20     _startMicrotaskLoop (dart:async/schedule_microtask.dart:52:5)
+#21     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#22     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:175:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel beta, v1.12.13+hotfix.6, on Mac OS X 10.14.6 18G103, locale en-BR)
+    [32m•[39m Flutter version 1.12.13+hotfix.6 at /Users/henriquemarciano/Development/flutter
+    [32m•[39m Framework revision 18cd7a3601 (5 weeks ago), 2019-12-11 06:35:39 -0800
+    [32m•[39m Engine revision 2994f7e1e6
+    [32m•[39m Dart version 2.7.0
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+    [32m•[39m Android SDK at /Users/henriquemarciano/Library/Android/sdk
+    [32m•[39m Android NDK location not configured (optional; useful for native profiling support)
+    [32m•[39m Platform android-28, build-tools 28.0.3
+    [32m•[39m ANDROID_HOME = /Users/henriquemarciano/Library/Android/sdk
+    [32m•[39m Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b01)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Xcode - develop for iOS and macOS (Xcode 11.1)
+    [32m•[39m Xcode at /Applications/Xcode.app/Contents/Developer
+    [32m•[39m Xcode 11.1, Build version 11A1027
+    [32m•[39m CocoaPods version 1.7.0
+
+[32m[✓][39m Chrome - develop for the web
+    [32m•[39m Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[32m[✓][39m Android Studio (version 3.4)
+    [32m•[39m Android Studio at /Applications/Android Studio.app/Contents
+    [32m•[39m Flutter plugin version 37.1.1
+    [32m•[39m Dart plugin version 183.6270
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b01)
+
+[32m[✓][39m VS Code (version 1.38.1)
+    [32m•[39m VS Code at /Applications/Visual Studio Code.app/Contents
+    [32m•[39m Flutter extension version 3.7.1
+
+[32m[✓][39m Connected device (3 available)
+    [32m•[39m SM G531BT  • 4b137c79632a724e • android-arm    • Android 5.1.1 (API 22)
+    [32m•[39m Chrome     • chrome           • web-javascript • Google Chrome 79.0.3945.117
+    [32m•[39m Web Server • web-server       • web-javascript • Flutter Tools
+
+[32m•[39m No issues found!
+```

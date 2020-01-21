@@ -1,0 +1,4 @@
+#Thu Jan 16 16:35:18 BRST 2020
+base.0=/Volumes/MacOS Applications/Projects/ezcoins_mobile/build/app/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
